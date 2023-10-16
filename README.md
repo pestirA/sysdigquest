@@ -46,9 +46,15 @@ Deploy Sysdig Agents to your Existing and New Clusters - **Complete**
 Dive Deep into the Sysdig Platform - Monitor - **In Progress**
 
   Advisor, what is the usage of your cluster vs the requiests and limits? What other interesting information can you find? **Address on Call**
-  Build a PromQL query using the query builder in the explore section of Sysdig Monitor using metrics from the Voting App (bonus points if you use StatsD metrics in a PromQL query)
-  Build a dashboard with your query + static metrics from Sysdig that relate multiple things together
-  Add views to the dashboard that might be interesting to a user
+  Build a PromQL query using the query builder in the explore section of Sysdig Monitor using metrics from the Voting App (bonus points if you use StatsD metrics in a PromQL query) - **Complete**
+ 
+  # Memory Usage in a Kubernetes Cluster
+    avg by (agent_tag_cluster) ((sysdig_host_memory_used_bytes/sysdig_host_memory_total_bytes)
+    * on(host,agent_tag_cluster) sysdig_host_info{agent_tag_cluster=~".+"}) * 100
+  ![Screenshot 2023-10-16 at 6 32 48 PM](https://github.com/pestirA/sysdigquest/assets/35427591/bd83f42a-0a0a-497c-8a53-a306e5217854)
+
+  Build a dashboard with your query + static metrics from Sysdig that relate multiple things together 
+  Add views to the dashboard that might be interesting to a user **Complete**
 
 Review Findings of your GKE Cluster and Application - 
 
@@ -64,6 +70,12 @@ As a platform customer, you have access to Sysdig Monitor. Launch Monitor to ful
 # Sysdig Monitor
 The user experience on this is magical - imagine out of the box, one click monitoring with ability to save these to your dashboards
 Yes the dashboard provide you all these details on your k8 clusters! Priceless :) 
+
+**Get Started with PromQL**
+Sysdig built form-based querying on top of PromQL, making queries faster and easier for you to write. 
+All metrics are enriched with cloud and Kubernetes metadata avoiding complicated PromQL joins.
+![Screenshot 2023-10-16 at 6 25 05 PM](https://github.com/pestirA/sysdigquest/assets/35427591/a6e2fdb0-2717-492c-a9fb-7bffb383baf4)
+
 
 **Workload Status & Performance Dashboard**
 Monitor your Kubernetes workloads and get quick answers to common problems: Are all the pods running, or is anything restarting? How is the service or workload operating? Monitor with Golden Signals automatically collected using Sysdig agent eBPF technology. What is CPU/memory usage vs requests and limits?
