@@ -1,7 +1,7 @@
 # Unboxing Sysdig
 A repo to unbox Sysdig. Sysdig is on a mission to make every Cloud deployment secure And reliable.
 
-# "Sysdig is on a mission to make every Cloud deployment secure And reliable.”
+Sysdig is on a mission to make every Cloud deployment secure And reliable.
 
 # Background
 Unboxing Sysdig- and it was as much fun as it looks
